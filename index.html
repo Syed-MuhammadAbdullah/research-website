@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Institute Knowledge Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="icon atom-icon"></span>
+                Research Institute
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#toc">Research Index</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contribute">Contribute</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home" class="header-section">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text" data-animation="fade-in">
+                    <h1 class="title">Research Institute <span class="text-gradient">Knowledge Hub</span></h1>
+                    <p class="intro-text">Welcome to our comprehensive repository of cutting-edge research across multiple disciplines. This knowledge hub serves as a central gateway to <b>innovative discoveries</b>, <i>groundbreaking methodologies</i>, and <u>collaborative opportunities</u> within the global research community.</p>
+                    <p>We aim to facilitate <mark>knowledge transfer</mark> and interdisciplinary collaboration while supporting the development of <b>emerging research areas</b> and <s>phasing out outdated paradigms</s>.</p>
+                    <p>Our institute has contributed to over 500 publications with an h-index of 78<sup>*</sup>.</p>
+                    <div class="cta-buttons">
+                        <a href="#toc" class="btn btn-gradient">Explore Research</a>
+                        <a href="#contribute" class="btn btn-outline">Submit Research</a>
+                    </div>
+                </div>
+                <div class="header-image" data-animation="fade-in">
+                    <div class="brain-animation">
+                        <!-- Brain SVG Structure using HTML/CSS only -->
+                        <div class="brain-outline"></div>
+                        <div class="brain-detail left"></div>
+                        <div class="brain-detail right"></div>
+                        <div class="brain-connection top"></div>
+                        <div class="brain-connection middle"></div>
+                        <div class="brain-connection bottom"></div>
+                        <div class="pulse-circle one"></div>
+                        <div class="pulse-circle two"></div>
+                        <div class="pulse-circle three"></div>
+                        <div class="pulse-circle four"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave-container">
+            <div class="wave"></div>
+        </div>
+    </header>
+
+    <!-- Table of Contents Section -->
+    <section id="toc" class="toc-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="title">Research <span class="text-gradient">Categories</span></h2>
+                <p class="section-subtitle">Explore our multi-level table of contents to discover research in various fields</p>
+            </div>
+            
+            <div class="category-grid">
+                <!-- Artificial Intelligence Category -->
+                <div class="category-card category-1" data-animation="zoom-in">
+                    <div class="category-icon">
+                        <div class="ai-icon">
+                            <!-- AI icon created with CSS -->
+                            <div class="brain-circle"></div>
+                            <div class="brain-path"></div>
+                        </div>
+                    </div>
+                    <h3 class="category-title">Artificial Intelligence</h3>
+                    
+                    <div class="accordion">
+                        <!-- Machine Learning Accordion Item -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accord1" class="accordion-input">
+                            <label for="accord1" class="accordion-header">Machine Learning</label>
+                            <div class="accordion-content">
+                                <ul class="topic-list">
+                                    <li><a href="#" class="topic-link">Supervised Learning</a></li>
+                                    <li><a href="#" class="topic-link">Unsupervised Learning</a></li>
+                                    <li><a href="#" class="topic-link">Reinforcement Learning</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Deep Learning Accordion Item -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accord2" class="accordion-input">
+                            <label for="accord2" class="accordion-header">Deep Learning</label>
+                            <div class="accordion-content">
+                                <ul class="topic-list">
+                                    <li><a href="#" class="topic-link">Neural Networks</a></li>
+                                    <li><a href="#" class="topic-link">Convolutional Neural Networks</a></li>
+                                    <li><a href="#" class="topic-link">Recurrent Neural Networks</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- NLP Accordion Item -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accord3" class="accordion-input">
+                            <label for="accord3" class="accordion-header">Natural Language Processing</label>
+                            <div class="accordion-content">
+                                <ul class="topic-list">
+                                    <li><a href="#" class="topic-link">Sentiment Analysis</a></li>
+                                    <li><a href="#" class="topic-link">Machine Translation</a></li>
+                                    <li><a href="#" class="topic-link">Text Generation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Biotechnology Category -->
+                <div class="category-card category-2" data-animation="zoom-in">
+                    <div class="category-icon">
+                        <div class="dna-icon">
+                            <!-- DNA icon created with CSS -->
+                            <div class="dna-strand left"></div>
+                            <div class="dna-strand right"></div>
+                            <div class="dna-rung one"></div>
+                            <div class="dna-rung two"></div>
+                            <div class="dna-rung three"></div>
+                            <div class="dna-rung four"></div>
+                        </div>
+                    </div>
+                    <h3 class="category-title">Biotechnology</h3>
+                    
+                    <div class="accordion">
+                        <!-- Genetic Engineering Accordion Item -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accord4" class="accordion-input">
+                            <label for="accord4" class="accordion-header">Genetic Engineering</label>
+                            <div class="accordion-content">
+                                <ul class="topic-list">
+                                    <li><a href="#" class="topic-link">CRISPR</a></li>
+                                    <li><a href="#" class="topic-link">Gene Therapy</a></li>
+                                    <li><a href="#" class="topic-link">Synthetic Biology</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Bioinformatics Accordion Item -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accord5" class="accordion-input">
+                            <label for="accord5" class="accordion-header">Bioinformatics</label>
+                            <div class="accordion-content">
+                                <ul class="topic-list">
+                                    <li><a href="#" class="topic-link">Genomic Analysis</a></li>
+                                    <li><a href="#" class="topic-link">Proteomics</a></li>
+                                    <li><a href="#" class="topic-link">Phylogenetics</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Molecular Biology Accordion Item -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accord6" class="accordion-input">
+                            <label for="accord6" class="accordion-header">Molecular Biology</label>
+                            <div class="accordion-content">
+                                <ul class="topic-list">
+                                    <li><a href="#" class="topic-link">DNA Sequencing</a></li>
+                                    <li><a href="#" class="topic-link">Protein Structure</a></li>
+                                    <li><a href="#" class="topic-link">Cell Biology</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Physics Category -->
+                <div class="category-card category-3" data-animation="zoom-in">
+                    <div class="category-icon">
+                        <div class="physics-icon">
+                            <!-- Physics atom icon created with CSS -->
+                            <div class="atom-nucleus"></div>
+                            <div class="atom-orbit one"></div>
+                            <div class="atom-orbit two"></div>
+                            <div class="atom-orbit three"></div>
+                            <div class="atom-electron one"></div>
+                            <div class="atom-electron two"></div>
+                            <div class="atom-electron three"></div>
+                        </div>
+                    </div>
+                    <h3 class="category-title">Physics</h3>
+                    
+                    <div class="accordion">
+                        <!-- Quantum Mechanics Accordion Item -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accord7" class="accordion-input">
+                            <label for="accord7" class="accordion-header">Quantum Mechanics</label>
+                            <div class="accordion-content">
+                                <ul class="topic-list">
+                                    <li><a href="#" class="topic-link">Quantum Computing</a></li>
+                                    <li><a href="#" class="topic-link">Quantum Entanglement</a></li>
+                                    <li><a href="#" class="topic-link">Wave-Particle Duality</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Astrophysics Accordion Item -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accord8" class="accordion-input">
+                            <label for="accord8" class="accordion-header">Astrophysics</label>
+                            <div class="accordion-content">
+                                <ul class="topic-list">
+                                    <li><a href="#" class="topic-link">Black Holes</a></li>
+                                    <li><a href="#" class="topic-link">Dark Matter</a></li>
+                                    <li><a href="#" class="topic-link">Cosmology</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Particle Physics Accordion Item -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accord9" class="accordion-input">
+                            <label for="accord9" class="accordion-header">Particle Physics</label>
+                            <div class="accordion-content">
+                                <ul class="topic-list">
+                                    <li><a href="#" class="topic-link">Standard Model</a></li>
+                                    <li><a href="#" class="topic-link">Higgs Boson</a></li>
+                                    <li><a href="#" class="topic-link">String Theory</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-animation="fade-up">
+                    <div class="stat-icon document-icon"></div>
+                    <h3 class="counter">2500+</h3>
+                    <p>Research Papers</p>
+                </div>
+                <div class="stat-item" data-animation="fade-up">
+                    <div class="stat-icon users-icon"></div>
+                    <h3 class="counter">350+</h3>
+                    <p>Researchers</p>
+                </div>
+                <div class="stat-item" data-animation="fade-up">
+                    <div class="stat-icon globe-icon"></div>
+                    <h3 class="counter">45+</h3>
+                    <p>Countries</p>
+                </div>
+                <div class="stat-item" data-animation="fade-up">
+                    <div class="stat-icon lightbulb-icon"></div>
+                    <h3 class="counter">130+</h3>
+                    <p>Patents</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contribution Form Section -->
+    <section id="contribute" class="form-section">
+        <div class="container">
+            <div class="form-container" data-animation="fade-up">
+                <div class="section-header">
+                    <h2 class="title">Contribute Your <span class="text-gradient">Research</span></h2>
+                    <p class="section-subtitle">Share your innovative findings with our research community</p>
+                </div>
+                
+                <form action="#" method="post" class="research-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="full_name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="full_name" name="full_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category" class="form-label">Research Category</label>
+                        <select class="form-control" id="category" name="category" required>
+                            <option value="" selected disabled>Select a category</option>
+                            <option value="Artificial Intelligence">Artificial Intelligence</option>
+                            <option value="Biotechnology">Biotechnology</option>
+                            <option value="Physics">Physics</option>
+                        </select>
+                        <div class="form-text">Need guidance? Check our <a href="#" class="submission-link">submission guidelines</a>.</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="abstract" class="form-label">Short Abstract</label>
+                        <textarea class="form-control" id="abstract" name="abstract" rows="5" required></textarea>
+                        <div class="form-text">Please provide a concise summary of your research (max 500 words).</div>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="agree_terms" name="agree_terms" required>
+                        <label class="form-check-label" for="agree_terms">I agree to the <a href="#" class="terms-link">terms and conditions</a> for research submissions</label>
+                    </div>
+                    
+                    <div class="form-button">
+                        <button type="submit" class="btn btn-gradient-submit">Submit Research</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h5><span class="atom-icon-small"></span> Research Institute</h5>
+                    <p>Advancing knowledge through innovative research and global collaboration.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon twitter"></a>
+                        <a href="#" class="social-icon facebook"></a>
+                        <a href="#" class="social-icon linkedin"></a>
+                        <a href="#" class="social-icon github"></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#toc">Research Index</a></li>
+                        <li><a href="#contribute">Contribute</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-container">
+                    <h5>Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li><span class="map-icon"></span> 123 Research Avenue, Innovation City</li>
+                        <li><span class="email-icon"></span> info@researchinstitute.org</li>
+                        <li><span class="phone-icon"></span> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Research Institute Knowledge Hub a Project of WE. All rights reserved by Abdullah and Adil </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
