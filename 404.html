@@ -3,65 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Page Not Found - Jamia Zahidia</title>
+  <title>404 - Page Not Found | Jamia Zahidia</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #002b5b;
+      background: linear-gradient(to right, #001f3f, #005288);
       color: #ffffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
+      align-items: center;
       text-align: center;
-    }
-
-    h1 {
-      font-size: 60px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    a {
-      background-color: #00bfff;
-      color: #fff;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 18px;
-    }
-
-    a:hover {
-      background-color: #0099cc;
+      height: 100vh;
+      padding: 20px;
     }
 
     .logo {
-      font-size: 30px;
-      margin-bottom: 20px;
-      color: #00bfff;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00d4ff;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 6vw;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      color: #e0f7ff;
+    }
+
+    a {
+      background-color: #00d4ff;
+      color: #002b5b;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    a:hover {
+      background-color: #00aacc;
     }
 
     .quote {
+      margin-top: 25px;
       font-style: italic;
-      font-size: 16px;
-      margin-top: 20px;
-      color: #cce6ff;
+      font-size: 0.95rem;
+      color: #ccf2ff;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 12vw;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .logo {
+        font-size: 1.4rem;
+      }
+      a {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
 <body>
-
   <div class="logo">Jamia Zahidia Israr Ul Uloom</div>
-  <h1>404 <br>Page Not Found</h1>
-  <p>Oops! The page you're looking for has gone missing.</p>
-  <a href="/">🏠 Back to Home</a>
+  <h1>404</h1>
+  <p>Oops! Page you're looking for is not available.</p>
+  <a href="/">🏠 Go to Home</a>
   <div class="quote">“Seek knowledge from the cradle to the grave.”</div>
-
 </body>
 </html>
