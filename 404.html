@@ -41,7 +41,7 @@
     .logo {
       font-size: 2rem;
       font-weight: bold;
-      color: #d4af37; /* Gold */
+      color: #d4af37;
       margin-bottom: 10px;
     }
 
@@ -80,7 +80,7 @@
       color: #d4ffdf;
     }
 
-    /* Laptop only */
+    /* Laptop / Desktop view */
     @media (min-width: 800px) {
       .container {
         flex-direction: row;
@@ -114,6 +114,39 @@
 
       p, .quote, .logo {
         text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+      }
+    }
+
+    /* Mobile View Tweaks */
+    @media (max-width: 799px) {
+      .container {
+        margin-top: -20px;
+      }
+
+      .mosque-img {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+      }
+
+      h1 {
+        font-size: 10vw;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      a {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+
+      .quote {
+        font-size: 0.85rem;
       }
     }
   </style>
