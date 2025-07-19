@@ -12,16 +12,21 @@
     }
 
     body {
-      background: linear-gradient(to right, #001f3f, #005288);
+      background: linear-gradient(135deg, #0b3d2e, #145a32);
       color: #ffffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       align-items: center;
       text-align: center;
-      min-height: 100vh;
-      padding: 20px;
     }
 
     .mosque-img {
@@ -29,30 +34,33 @@
       max-width: 500px;
       border-radius: 15px;
       margin-bottom: 25px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      border: 3px solid #d4af37;
     }
 
     .logo {
       font-size: 2rem;
       font-weight: bold;
-      color: #00d4ff;
+      color: #d4af37; /* Gold */
       margin-bottom: 10px;
     }
 
     h1 {
       font-size: 6vw;
       margin: 10px 0;
+      color: #ffffff;
+      text-shadow: 0 2px 4px #000;
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 25px;
-      color: #e0f7ff;
+      color: #e9fce9;
     }
 
     a {
-      background-color: #00d4ff;
-      color: #002b5b;
+      background-color: #d4af37;
+      color: #0b3d2e;
       padding: 12px 28px;
       border-radius: 30px;
       text-decoration: none;
@@ -62,42 +70,66 @@
     }
 
     a:hover {
-      background-color: #00aacc;
+      background-color: #c39b28;
     }
 
     .quote {
       margin-top: 25px;
       font-style: italic;
       font-size: 0.95rem;
-      color: #ccf2ff;
+      color: #d4ffdf;
     }
 
-    @media (max-width: 500px) {
+    /* Laptop only */
+    @media (min-width: 800px) {
+      .container {
+        flex-direction: row;
+        max-width: 1200px;
+        width: 100%;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .mosque-img {
+        width: 45%;
+        transition: transform 0.4s ease;
+      }
+
+      .mosque-img:hover {
+        transform: scale(1.03);
+      }
+
+      .text-content {
+        width: 55%;
+        background: rgba(255, 255, 255, 0.06);
+        padding: 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+      }
+
       h1 {
-        font-size: 12vw;
+        font-size: 4vw;
       }
-      p {
-        font-size: 1rem;
-      }
-      .logo {
-        font-size: 1.4rem;
-      }
-      a {
-        font-size: 0.9rem;
-        padding: 10px 20px;
+
+      p, .quote, .logo {
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5);
       }
     }
   </style>
 </head>
 <body>
 
-  <img src="mosque.jpg" alt="Mosque" class="mosque-img" />
-  
-  <div class="logo">Jamia Zahidia Israr Ul Uloom</div>
-  <h1>404</h1>
-  <p>Oops! Page you're looking for is not available.</p>
-  <a href="/">🏠 Go to Home</a>
-  <div class="quote">“Seek knowledge from the cradle to the grave.”</div>
+  <div class="container">
+    <img src="mosque.jpg" alt="Mosque" class="mosque-img" />
+    <div class="text-content">
+      <div class="logo">Jamia Zahidia Israr Ul Uloom</div>
+      <h1>404</h1>
+      <p>Oops! Page you're looking for is not available.</p>
+      <a href="/">🏠 Go to Home</a>
+      <div class="quote">“Seek knowledge from the cradle to the grave.”</div>
+    </div>
+  </div>
 
 </body>
 </html>
