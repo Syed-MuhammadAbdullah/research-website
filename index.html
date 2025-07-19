@@ -453,8 +453,19 @@
     </div>
 
     <img class="thumbnail" src="mosque.jpg" alt="چھٹا لیکچر" />
-    <p style="color: red; font-weight: bold;">⚠️ اس دن کی ویڈیو ابھی دستیاب نہیں ہے، لیکچر کے بعد اپلوڈ کر دی جائے گی۔
-    </p>
+
+
+    <button class="btn"
+      onclick="openFullscreen('fullscreenVideo6', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/1515026726128492&autoplay=1')">لیکچر
+      دیکھیں</button>
+
+
+    <div id="fullscreenVideo6" class="fullscreen-video">
+      <div class="video-box">
+        <button class="close-btn" onclick="closeFullscreen('fullscreenVideo5')">×</button>
+        <iframe id="videoFrame5" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
 
 
   </div>
