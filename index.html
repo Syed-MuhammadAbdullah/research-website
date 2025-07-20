@@ -434,6 +434,8 @@
   flex: 0 0 auto;
   border-radius: 8px;
 }
+
+
   </style>
 
 
@@ -626,29 +628,32 @@
 
 
 
+<form id="contactForm" onsubmit="sendToWhatsApp(); return false;" 
+  style="max-width: 330px; margin: 30px auto; padding: 25px 25px; background: #f4fff9; border-radius: 20px; box-shadow: 0 8px 25px rgba(0, 128, 0, 0.2); font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; color: #064d24;">
 
+  <h3 style="text-align: center; font-size: 22px; margin-bottom: 25px; font-weight: bold; color: #0a4d1a;">
+    💬 قاری صاحب سے رابطہ کریں
+  </h3>
 
+  <label for="name" style="font-size: 15px;">آپ کا نام:</label><br>
+  <input type="text" id="name" required placeholder="مثال: Ahmad Ali"
+    style="width: 90%; padding: 8px 10px; border: 1px solid #c0e6d4; border-radius: 8px; margin-bottom: 15px; font-size: 14px; transition: 0.3s; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); outline: none; direction: ltr; text-align: left;"
+    onfocus="this.style.borderColor='#28a745'">
 
+  <label for="message" style="font-size: 15px;">پیغام:</label><br>
+  <textarea id="message" rows="3" required placeholder="Your message here..."
+    style="width: 90%; padding: 8px 10px; border: 1px solid #c0e6d4; border-radius: 8px; font-size: 14px; margin-bottom: 18px; transition: 0.3s; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); outline: none; direction: ltr; text-align: left;"
+    onfocus="this.style.borderColor='#28a745'"></textarea>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <div style="text-align: center;">
+    <button type="submit"
+      style="width: 65%; padding: 8px; font-size: 14px; font-weight: bold; background: linear-gradient(to right, #28a745, #218838); color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s;"
+      onmouseover="this.style.background='linear-gradient(to right, #218838, #1e7e34)'"
+      onmouseout="this.style.background='linear-gradient(to right, #28a745, #218838)'">
+      🟢 WhatsApp پر بھیجیں
+    </button>
+  </div>
+</form>
 
 
 
@@ -722,6 +727,30 @@
 
 
   <script>
+
+      function sendToWhatsApp() {
+    const name = document.getElementById("name").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !message) {
+      alert("براہ کرم تمام خانے پر کریں۔");
+      return;
+    }
+
+    const fullMessage =
+      `السلام علیکم ورحمۃ اللہ وبرکاتہ\n\n` +
+      `*نہایت مؤدبانہ گزارش ہے کہ بندہ*:\n` +
+      `👤 *نام:* ${name}\n\n` +
+      `📩 *درجِ ذیل التماس پیش کرنا چاہتا ہے:* \n` +
+      `❝ ${message} ❞\n\n` +
+      `خاکسار کو عندالموقع جواب مرحمت فرما کر ممنون فرمائیں۔\n\n` +
+      `جزاکم اللہ خیراً کثیراً\n——`;
+
+    const phoneNumber = "923025228803"; // ✅ Qari Sahab's number
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
+    window.open(whatsappURL, "_blank");
+  }
     function openFullscreen() {
       const fbVideo = "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/733983202932478/&autoplay=1&show_text=false&mute=false";
       const frame = document.getElementById("videoFrame");
