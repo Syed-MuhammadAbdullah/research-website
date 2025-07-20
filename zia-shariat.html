@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jamia Zahidia | Zia-e-Shariat Course</title>
+    <meta name="description"
+        content="Jamia Zahidia Israr-Ul-Uloom offers the Zia-e-Shariat Course and Islamic education for all ages. Learn Quran, Hadith, Fiqh, and more through our online and onsite programs.">
+    <meta name="keywords"
+        content="Zia e Shariat, Zia-e-Shariyat, Zia-e-Shariat Course, Jamia Zahidia, Jamia Zahidia Israr ul Uloom, Gulshan e Khurshid School System, Islamic School Rawalpindi, Madarsa Rawalpindi, Quran Classes, Hadith Studies, Fiqh Course, Dars e Nizami, Islami taleem">
+    <link rel="icon" type="image/png" sizes="16x16" href="sixteen_into_sixteen.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="thirtytwo_into_thirtytwo.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="fourtyeight_into_fourtyeight.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="oneeighty_into_oneeighty.png">
+    <link rel="shortcut icon" href="thirtytwo_into_thirtytwo.png" type="image/png">
+    <meta name="theme-color" content="#116530">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            text-align: right;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #006400;
+            color: white;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .title h1 {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .main {
+            padding: 40px 20px;
+            text-align: right;
+            font-size: 12px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .fullscreen-video {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-box {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            border: 6px solid #7f7902;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .fullscreen-video iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 4px;
+            z-index: 10;
+        }
+
+        footer {
+
+            background: rgb(0, 95, 0);
+            color: white;
+            text-align: center;
+            padding: 14px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        .intro {
+            max-width: 800px;
+            margin: auto;
+            text-align: right;
+            padding: 20px;
+            line-height: 2;
+            font-size: 12px;
+        }
+
+        .intro em {
+            color: #004d40;
+            /* Teal for Qur'an */
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        .intro strong {
+            color: #006400;
+            /* Dark green for Hadith titles */
+            font-weight: bold;
+        }
+
+        .intro h2 {
+            color: #d4630d;
+            font-size: 22px;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-align: right;
+        }
+
+        .intro p {
+            margin-bottom: 18px;
+        }
+
+        .course-title {
+            display: inline-block;
+            border-bottom: 4px dashed #28a745;
+            animation: wave 1.5s infinite linear;
+        }
+
+        .bg-half {
+            background: url('Imam_Malik.jpg') center/cover no-repeat;
+            height: 35vh;
+        }
+
+        .ticker {
+            background: #b30000;
+            color: white;
+            padding: 2px 6px;
+            font-size: 11px;
+            /* smaller text */
+            display: flex;
+            align-items: center;
+            direction: rtl;
+        }
+
+        .ticker strong {
+            white-space: nowrap;
+            margin-left: 16px;
+            margin-top: 4px;
+            margin-bottom: 6px;
+            font-weight: 900;
+            font-size: 13px;
+            /* smaller label */
+            color: #ffff00;
+            background-color: #b30000;
+            padding: 2px 6px;
+            border-radius: 3px;
+            box-shadow: 0 0 4px #ffff00;
+            text-transform: uppercase;
+            font-family: 'Arial Black', Arial, sans-serif;
+            cursor: default;
+        }
+
+        .ticker-box {
+            overflow: hidden;
+            width: 300px;
+            /* narrower box */
+            position: relative;
+            direction: ltr;
+        }
+
+        .scroll-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scrollText 30s linear infinite;
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes wave {
+            from {
+                border-bottom-style: dashed;
+            }
+
+            to {
+                border-bottom-style: dotted;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                font-size: 12px;
+                max-width: 1100px;
+                margin: auto;
+            }
+
+            .main,
+            .intro {
+                font-size: 12px;
+                padding: 10px 30px;
+            }
+
+            .title h1 {
+                font-size: 11px;
+                line-height: 1.2;
+            }
+
+            .course-title {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 13px;
+                padding: 6px 16px;
+            }
+
+            .thumbnail {
+                max-width: 400px;
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 20px;
+            }
+
+            header {
+                padding: 6px 20px;
+            }
+
+            .video-box iframe {
+                height: 350px;
+            }
+        }
+
+        .main-header {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            background: rgb(0, 95, 0);
+            padding: 10px 15px;
+            position: sticky;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        .hamburger-icon {
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            z-index: 2100;
+        }
+
+        .bar {
+            height: 3px;
+            width: 80%;
+            background: white;
+            margin: 4px 0;
+            transition: 0.4s;
+            border-radius: 2px;
+
+        }
+
+        #menu-toggle:checked+.hamburger-icon .top {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        #menu-toggle:checked+.hamburger-icon .middle {
+            opacity: 0;
+        }
+
+        #menu-toggle:checked+.hamburger-icon .bottom {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        #menu-toggle:checked+.hamburger-icon .bar {
+            background: white;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            margin-left: 60px;
+            /* leave space for hamburger */
+        }
+
+        .logo img {
+            height: 35px;
+            margin-right: 4px;
+            margin-top: 16px;
+        }
+
+        .title h1 {
+            font-size: 14px;
+            color: #ffffff;
+            margin: 0;
+            margin-right: 20px;
+            text-align: right;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -220px;
+            width: 205px;
+            height: 100%;
+            background: rgba(0, 100, 0, 0.2);
+            backdrop-filter: blur(20px);
+            border-right: 2px solid limegreen;
+            box-shadow: 5px 0 20px limegreen;
+            transition: left 0.6s ease-in-out;
+            z-index: 2000;
+        }
+
+        #menu-toggle:checked~.sidebar {
+            left: 0;
+        }
+
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 15px;
+        }
+
+        .sidebar a {
+            color: white;
+            justify-content: center;
+            text-decoration: none;
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 10px 0;
+            padding-bottom: 8px;
+            border-radius: 9px;
+            transition: 0.3s;
+            background: rgb(0, 95, 0);
+            box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+        }
+
+        .sidebar a:hover {
+            color: rgb(0, 95, 0);
+            ;
+            background: white;
+            transform: translateX(5px);
+            box-shadow: 0 0 10px #1aff8c;
+        }
+
+        .sidebar-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            margin-top: 80px;
+        }
+
+        .sidebar-logo img {
+            width: 80px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px limegreen;
+        }
+    </style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+    <header class="main-header">
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="hamburger-icon">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+        </label>
+
+        <div class="header-content">
+            <div class="logo">
+                <img src="SiteLogo.png" alt="لوگو" />
+            </div>
+            <div class="title">
+                <h1>جامع مسجد انوار مدینہ<br>و جامعہ زاہدیہ اسرار العلوم ویلفیئر گروپ</h1>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <nav>
+                <div class="sidebar-logo">
+                    <img src="SiteLogo.png" alt="Logo" />
+                </div>
+                <hr style="border: 0.5px solid #148f41; margin: 15px 0;">
+                <a href="index.html">🏠 Home</a>
+                <a href="zia-shariat.html">📘 Course</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="bg-half"></div>
+    <div class="ticker">
+        <strong>نوٹ:</strong>
+        <div class="ticker-box">
+            <span class="scroll-text">
+                جامع مسجد انوارِ مدینہ و جامعہ زاہدیہ اسرار العلوم اسکول سسٹم، گلشنِ خورشید، چاکرہ روڈ، راولپنڈی میں
+                علمِ دین
+                حاصل کرنے کے لیے طلبہ کے داخلے جاری ہیں۔
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                جامع مسجد انوارِ مدینہ و جامعہ زاہدیہ اسرار العلوم اسکول سسٹم، گلشنِ خورشید، چاکرہ روڈ، راولپنڈی میں
+                علمِ دین
+                حاصل کرنے کے لیے طلبہ کے داخلے جاری ہیں۔
+            </span>
+
+        </div>
+    </div>
+
+
+    <div class="intro">
+        <h2> ایک انقلابی قدم <br> ۳۰ روزہ "ضیائے شریعت کورس"</h2>
+
+        <p>📣 گرمیوں کی چھٹیاں؟ اب صرف کھیل یا وقت ضائع نہیں...!<br>
+            بلکہ ایک ایسا سفر جو آپ کو اللہ کے قریب کر دے، ایسا کورس جو زندگی کا رخ بدل دے!</p>
+
+        <p>📖 <strong>قرآن کہتا ہے:</strong><br><br>
+            <em>قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ</em><br><br>
+            "کیا برابر ہو سکتے ہیں وہ جو جانتے ہیں اور وہ جو نہیں جانتے؟" (الزمر: 9)
+        </p>
+
+        <p>💬 <strong>نبی ﷺ نے فرمایا:</strong><br><br>
+            "جس نے علمِ دین کی طلب میں سفر کیا، اللہ اس کے لیے جنت کا راستہ آسان کر دیتا ہے" (مسلم)</p>
+
+        <p>🕌 جامعہ زاہدیہ اسرار العلوم کا یہ کورس صرف سبق نہیں — بلکہ فکر و شعور کی بیداری، ایمان کی تازگی، اور عمل کی
+            تحریک ہے۔</p>
+
+        <p>🔥 ہم نے آغاز کیا ہے ایک تحریک کا!<br>
+            🌙 ایسا سمر کیمپ جو علم، عمل، ادب، اخلاق، اور دین کے نور سے دل و دماغ کو منور کر دے۔</p>
+
+        <p>📚 <strong>کورس میں شامل:</strong><br>
+            ✔ قرآن کریم کی تلاوت و تجوید<br>
+            ✔ احادیثِ مبارکہ کا فہم<br>
+            ✔ عقائد، فقہ، اور اسلامی آداب<br>
+            ✔ بچوں، خواتین اور نوجوانوں کے لیے آسان اور جامع سبق<br>
+            ✔ آن لائن ویڈیوز کے ذریعے ہر جگہ رسائی</p>
+
+        <p>🚨 اب وقت ہے! اپنے اور اپنے بچوں کے ایمان کو تازگی دینے کا، علم سے روشنی پھیلانے کا۔<br>
+            🎯 صرف 30 دن — لیکن اثر پوری زندگی کا!</p>
+
+        <p>🔔 نیچے دی گئی ویڈیوز سے آغاز کریں اور اس مبارک سفر میں شامل ہوں۔</p>
+    </div>
+
+    <figure style="display: flex; flex-direction: column; align-items: center; margin: 0 auto;">
+        <img src="course_image.jpg" width="300px" height="auto">
+        <figcaption style="margin-top: 0px; font-size: 10px; font-weight: bold; color: #006400; margin-bottom: -20px;">
+            از: حافظ محمد شفیق چشتی (فاضل بھیرہ شریف)
+        </figcaption>
+    </figure>
+
+
+
+    <!-- FIRST DAY OF COURSE -->
+
+    <div class="main">
+        <h2 class="course-title">📘 ضیائے شریعت کورس - دن اول</h2>
+        <div class="course-info">
+            <p><strong>📅 تاریخ:</strong> <span>🌙 14 جولائی، بروز پیر</span></p>
+            <p><strong>⏰ وقت:</strong> <span>نمازِ مغرب کے فوراً بعد</span></p>
+            <p><strong>📍 مقام:</strong> <span>جامعہ زاہدیہ اسرارالعلوم</span></p>
+            <p><strong>👤 مہمانِ خصوصی:</strong><br>
+                <span>شیخ مفتی عبدالرحمٰن قریشی صاحب<br>
+                    (فاضل الکرم انٹرنیشنل انسٹیٹیوٹ، ناظم الکرم فرینڈز، راولپنڈی ڈویژن)</span>
+            </p>
+            <p><strong>📖 موضوع:</strong> 🌹 <em>فہمِ دین اور ہماری ذمہ داری</em> 🌹</p><br><br>
+        </div>
+
+        <img class="thumbnail" src="first.jpg" alt="پہلا لیکچر" />
+        <button class="btn"
+            onclick="openFullscreen('fullscreenVideo1', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/733983202932478&autoplay=1')">لیکچر
+            دیکھیں</button>
+    </div>
+    <div id="fullscreenVideo1" class="fullscreen-video">
+        <div class="video-box">
+            <button class="close-btn" onclick="closeFullscreen('fullscreenVideo1')">×</button>
+            <iframe id="videoFrame1" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- SECOND DAY OF COURSE -->
+
+
+    <div class="main">
+        <h2 class="course-title">📘 ضیائے شریعت کورس - دن دوم</h2>
+        <div class="course-info">
+            <p><strong>📅 تاریخ:</strong> <span> 15 جولائی 2025</span></p>
+            <p><strong>⏰ وقت:</strong> <span>07:45 تا 09:00 بجے رات</span></p>
+            <p><strong>📍 مقام:</strong>
+                <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+            </p>
+            <p><strong>👤 مہمانِ خصوصی:</strong><br>
+                <span>پروفیسر علامہ علی اختر اعوان صاحب<br>
+                    (صدر منہاج علماء کونسل راولپنڈی)</span>
+            </p>
+            <p><strong>📖 موضوع:</strong> 🌹 <em>"عقیدہ" کی تعریف اور فلسفہ عقیدۂ توحید و رسالت</em> 🌹</p><br><br>
+        </div>
+
+        <img class="thumbnail" src="second.jpg" alt="دوسرا لیکچر" />
+        <button class="btn"
+            onclick="openFullscreen('fullscreenVideo2', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/513233075173459&autoplay=1')">لیکچر
+            دیکھیں</button>
+    </div>
+
+    <div id="fullscreenVideo2" class="fullscreen-video">
+        <div class="video-box">
+            <button class="close-btn" onclick="closeFullscreen('fullscreenVideo2')">×</button>
+            <iframe id="videoFrame2" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+    <!-- THIRD DAY OF COURSE -->
+
+    <div class="main">
+        <h2 class="course-title">📘 ضیائے شریعت کورس - دن سوم</h2>
+        <div class="course-info">
+            <p><strong>📅 تاریخ:</strong> <span> 16 جولائی 2025</span></p>
+            <p><strong>⏰ وقت:</strong> <span>07:45 تا 09:00 بجے رات</span></p>
+            <p><strong>📍 مقام:</strong>
+                <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+            </p>
+            <p><strong>👤 مہمانِ خصوصی:</strong><br>
+                <span>حافظ محمد شفیق صاحب</span>
+            </p>
+            <p><strong>📖 موضوع:</strong> 🌹 <em>"حقیقت ایمان - حدیث جبریل کی روشنی میں"</em> 🌹</p><br><br>
+
+            <p style="color: red; font-weight: bold;">⚠️ اس دن کی ویڈیو دستیاب نہیں ہے۔ کچھ تکنیکی مسائل کی وجہ سے
+                ریکارڈنگ
+                ممکن نہ ہو سکی۔</p>
+        </div>
+    </div>
+
+    <!-- FOURTH DAY OF COURSE -->
+
+    <div class="main">
+        <h2 class="course-title">📘 ضیائے شریعت کورس - دن چہارم</h2>
+        <div class="course-info">
+            <p><strong>📅 تاریخ:</strong> <span> 17 جولائی 2025</span></p>
+            <p><strong>⏰ وقت:</strong> <span>07:45 تا 09:00 بجے رات</span></p>
+            <p><strong>📍 مقام:</strong>
+                <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+            </p>
+            <p><strong>👤 مہمانِ خصوصی:</strong><br>
+                <span>حافظ محمد شفیق صاحب</span>
+            </p>
+            <p><strong>📖 موضوع:</strong> 🌹 <em>"ارکانِ ایمان کی تفصیل (ایمان مفصل و مجمل)"</em> 🌹</p><br>
+            <p>اس لیکچر میں ہم یہ سیکھیں گے کہ ایک مسلمان کا انبیاء، ملائکہ، کتبِ سماویہ، اور یومِ آخرت کے بارے میں کیا
+                عقیدہ
+                ہونا لازم ہے۔</p>
+            <p><em>(وجودِ باری تعالیٰ کے متعلق رات کے لیکچر میں گفتگو ہو چکی)</em></p><br>
+        </div>
+
+        <button class="btn"
+            onclick="openFullscreen('fullscreenVideo4', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/1429282358273765&autoplay=1')">لیکچر
+            دیکھیں</button>
+    </div>
+
+    <div id="fullscreenVideo4" class="fullscreen-video">
+        <div class="video-box">
+            <button class="close-btn" onclick="closeFullscreen('fullscreenVideo4')">×</button>
+            <iframe id="videoFrame4" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- FIFTH DAY OF COURSE -->
+
+    <div class="main">
+        <h2 class="course-title">📘 ضیائے شریعت کورس - دن پنجم</h2>
+        <div class="course-info">
+            <p><strong>📅 تاریخ:</strong> <span> 18 جولائی 2025</span></p>
+            <p><strong>⏰ وقت:</strong> <span>07:45 تا 09:00 بجے رات</span></p>
+            <p><strong>📍 مقام:</strong>
+                <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+            </p>
+            <p><strong>👤 مہمانِ خصوصی:</strong><br>
+                <span>پروفیسر ڈاکٹر حافظ جاوید احمد صاحب<br>
+                    (فاضل الکرم انٹرنیشنل انسٹیٹیوٹ، لیکچرر یونیورسٹی آف سنٹرل پنجاب راولپنڈی کیمپس)</span>
+            </p>
+            <p><strong>📖 اعلان:</strong><br>
+                🌹 السلام علیکم! تمام احباب کو بار دگر دعوت عام 🌹<br>
+                آج ہمارے درمیان ایک عظیم عالم تشریف لائے ہیں۔<br>
+                اب یہ ہم پر ہے کہ ہم کس حد تک استفادہ کرتے ہیں۔
+            </p><br><br>
+        </div>
+
+        <img class="thumbnail" src="fifth.jpg" alt="پانچواں لیکچر" />
+        <button class="btn"
+            onclick="openFullscreen('fullscreenVideo5', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/1240092957355335&autoplay=1')">لیکچر
+            دیکھیں</button>
+    </div>
+
+    <div id="fullscreenVideo5" class="fullscreen-video">
+        <div class="video-box">
+            <button class="close-btn" onclick="closeFullscreen('fullscreenVideo5')">×</button>
+            <iframe id="videoFrame5" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <!-- SIXTH DAY OF COURSE -->
+    <div class="main">
+        <h2 class="course-title">📘 ضیائے شریعت کورس - دن ششم</h2>
+        <div class="course-info">
+            <p><strong>📅 تاریخ:</strong> <span> 19 جولائی 2025</span></p>
+            <p><strong>⏰ وقت:</strong> <span>07:45 تا 09:00 بجے رات</span></p>
+            <p><strong>📍 مقام:</strong>
+                <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+            </p>
+            <p><strong>👤 مقرر:</strong><br>
+                🌹 حافظ محمد شفیق چشتی (فاضل بھیرہ شریف) 🌹
+            </p>
+            <p><strong>📖 موضوع:</strong><br>
+                🔷 مأمورات و منہیات 🔷<br>
+                🌹 احکاماتِ شرعیہ کے درجات / اصطلاحاتِ شرعیہ 🌹<br>
+                عبادات کی درست ادائیگی کے لیے جن اعمال کا کرنا اور نہ کرنا لازم ہے ان سے آگاہی
+            </p><br><br>
+        </div>
+
+        <button class="btn"
+            onclick="openFullscreen('fullscreenVideo6', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/1515026726128492&autoplay=1')">
+            لیکچر دیکھیں
+        </button>
+
+    </div>
+
+    <div id="fullscreenVideo6" class="fullscreen-video">
+        <div class="video-box">
+            <button class="close-btn" onclick="closeFullscreen('fullscreenVideo6')">×</button>
+            <iframe id="videoFrame5" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div style="display: none;">
+        Jamia Zahidia Israr-ul-Uloom, Gulshan-e-Khurshid School System, Zia-e-Shariat Course, Zia-e-Shariyat Course,
+        Quran, Hadith, Fiqh, Islamic education, Dars-e-Nizami in Rawalpindi.
+    </div>
+
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <footer
+        style="background-color: rgb(0, 95, 0); color: white; padding: 30px 20px; font-size: 15px; margin-top: 40px; font-family: 'Segoe UI', sans-serif;">
+        <div style="max-width: 600px; margin: auto;">
+
+            <p style="margin: 10px 0;">
+                <i class="fas fa-phone-alt" style="margin-right: 10px; color: #a5d6a7;"></i>
+                03025228803
+            </p>
+
+            <p style="margin: 10px 0;">
+                <i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #a5d6a7;"></i>
+                Street No. 05, Rawalpindi, Pakistan
+            </p>
+
+            <p style="margin: 10px 0;">
+                <i class="fab fa-whatsapp" style="margin-right: 10px; color: #a5d6a7;"></i>
+                <a href="https://wa.me/923025228803" style="color: #a5d6a7; text-decoration: none;">Chat on WhatsApp</a>
+            </p>
+
+            <p style="margin: 10px 0;">
+                <i class="fas fa-envelope" style="margin-right: 10px; color: #a5d6a7;"></i>
+                <a href="mailto:hafizhafizmuhammadshafique@gmail.com"
+                    style="color: #a5d6a7; text-decoration: none;">Email
+                    Us</a>
+            </p>
+
+            <p style="margin: 10px 0;">
+                <i class="fab fa-facebook" style="margin-right: 10px; color: #a5d6a7;"></i>
+                <a href="https://www.facebook.com/profile.php?id=100078799332545"
+                    style="color: #a5d6a7; text-decoration: none;">Facebook Profile</a>
+            </p>
+
+            <hr style="border-color: #4caf50; margin: 20px 0;">
+            <p style="text-align: center; font-size: 16px; font-weight: bold; margin-top: 15px;">
+                حافظ محمد شفیق چشتی (فاضل بھیرہ شریف)
+            </p>
+            <p style="text-align: center; font-size: 13px;">
+                Jamia Zahidia Asrar-ul-Uloom
+            </p>
+
+            <p style="text-align: center; font-size: 13px; direction: ltr;">
+                © 2025 All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <!-- JAVA SCRIPT CODE START NOW ONWARDS -->
+
+
+    <script>
+        function openFullscreen() {
+            const fbVideo = "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/733983202932478/&autoplay=1&show_text=false&mute=false";
+            const frame = document.getElementById("videoFrame");
+            frame.src = fbVideo;
+            document.getElementById("fullscreenVideo").style.display = "flex";
+        }
+
+        function closeFullscreen() {
+            document.getElementById("fullscreenVideo").style.display = "none";
+            document.getElementById("videoFrame").src = "";
+        }
+
+        function openFullscreen(id, videoUrl) {
+            const container = document.getElementById(id);
+            const iframe = container.querySelector("iframe");
+            iframe.src = videoUrl;
+            container.style.display = "flex";
+        }
+
+        function closeFullscreen(id) {
+            const container = document.getElementById(id);
+            const iframe = container.querySelector("iframe");
+            iframe.src = "";
+            container.style.display = "none";
+        }
+
+
+    </script>
+
+</body>
+
+</html>
