@@ -426,10 +426,18 @@
         }
 
 
+#sidebar {
+  overflow-y: auto;
+}
 
+        
 
 
         /* here added */
+
+        /* the course day selector */
+
+
     </style>
 
 
@@ -519,7 +527,7 @@
         <p>🚨 اب وقت ہے! اپنے اور اپنے بچوں کے ایمان کو تازگی دینے کا، علم سے روشنی پھیلانے کا۔<br>
             🎯 صرف 30 دن — لیکن اثر پوری زندگی کا!</p>
 
-   
+        <p>🔔 نیچے دی گئی ویڈیوز سے آغاز کریں اور اس مبارک سفر میں شامل ہوں۔</p>
     </div>
 
     <figure style="display: flex; flex-direction: column; align-items: center; margin: 0 auto;">
@@ -528,13 +536,214 @@
             از: حافظ محمد شفیق چشتی (فاضل بھیرہ شریف)
         </figcaption>
     </figure>
-<div class="intro">
-    <br><br>
-      <p>🔔 نیچے دی گئی ویڈیوز سے آغاز کریں اور اس مبارک سفر میں شامل ہوں۔</p>
+
+<!-- ////////////////////////////////////////////////-->
+ <!-- //////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////// -->
+
+<br><br>
+
+<!-- 🔵 Slide Button (Left Side) -->
+<div id="teaseBtn" onclick="toggleSidebar()" 
+     style="position: fixed; top: 94%; left: -150px; transform: translateY(-50%); 
+            background: linear-gradient(135deg, #00c6ff, #0072ff); color: white; 
+            padding: 14px 28px; border-radius: 0 30px 30px 0; cursor: pointer; 
+            font-weight: bold; font-family: 'Segoe UI', sans-serif; font-size: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.3); 
+            z-index: 1001;
+             transition: left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);">
+  👋 لیکچرز
 </div>
+
+<!-- 📚 Sidebar (Green Glow Style) -->
+<div id="sidebar" style="position: fixed; top: 0; right: -250px; width: 230px; height: 100%;
+     background: rgba(0, 100, 0, 0.2); backdrop-filter: blur(20px);
+     border-left: 2px solid limegreen; box-shadow: -5px 0 20px limegreen;
+     transition: right 0.6s ease-in-out; z-index: 2000; padding-top: 60px;">
+
+  <button onclick="closeSidebar()" style="position: absolute; top: 20px; left: 20px; 
+      font-size: 30px; background: none; border: none; color: white; cursor: pointer;">×</button>
+
+  <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 30px;">
+    <img src="SiteLogo.png" style="width: 80px; border-radius: 8px; box-shadow: 0 0 15px limegreen;" />
+  </div>
+
+<div style="overflow-y: auto; height: calc(84% - 200px); padding: 10px 15px; padding-bottom: 80px;">
+
+
+
+    <a onclick="goToLecture('day1')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 دن 1 - نجاست حکمیہ</a>
+
+<a onclick="goToLecture('day2')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 دن 2 - وضو کے فرائض</a>
+
+<a onclick="goToLecture('day3')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 
+  دن 3 – حقیقت ایمان
+</a>
+
+<a onclick="goToLecture('day4')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 
+دن 4 – ارکان ایمان
+</a>
+
+<a onclick="goToLecture('day5')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 
+دن 5 – اصلاحِ معاشرہ
+  
+</a>
+
+<a onclick="goToLecture('day6')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 
+  دن 6 – مأمورات و منہیات
+  
+</a>
+
+<a onclick="goToLecture('day7')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘
+  دن 7 – شرائط نماز (تعریف و اقسام)
+  
+</a>
+
+<a onclick="goToLecture('day8')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 
+  دن 8 – طہارت کی شرط
+  
+</a>
+
+<a onclick="goToLecture('day9')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 
+  دن 9 – نجاست حکمیہ
+  
+</a>
+
+<a onclick="goToLecture('day10')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 
+  دن 10 – شرط نمبر 2 تا 6
+  
+</a>
+
+<a onclick="goToLecture('day11')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘
+  دن 11 – نماز کے فرائض
+  
+</a>
+
+<a onclick="goToLecture('day12')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 
+  دن 12 – آدابِ معیشت
+  
+</a>
+
+<a onclick="goToLecture('day13')" style="display: block; color: white; background: rgb(0, 95, 0); text-align: center;
+  font-size: 15px; font-weight: bold; margin: 10px 0; padding: 10px;
+  border-radius: 9px; text-decoration: none; box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  transition: 0.3s;">📘 
+  دن 13 – فقہی مسائل (رفع یدین، آمین، قراءت)
+  
+</a>
+
+</div>
+
+</div>
+<script>
+let tease = document.getElementById('teaseBtn');
+let sidebar = document.getElementById('sidebar');         // Your sidebar
+let otherSidebar = document.querySelector('.sidebar');    // Other sidebar
+let sidebarOpen = false;
+
+function animateTease() {
+  if (!sidebarOpen && otherSidebar.style.right !== '0px') {
+    tease.style.left = '0px';
+    setTimeout(() => {
+      tease.style.left = '-150px';
+      setTimeout(animateTease, 1000);
+    }, 5000);
+  }
+}
+
+animateTease();
+
+function toggleSidebar() {
+  // Close .sidebar if open
+  if (document.querySelector('.sidebar').style.right === '0px') {
+    document.querySelector('.sidebar').style.right = '-250px';
+  }
+
+  // Open #sidebar
+  document.getElementById('sidebar').style.right = '0';
+  tease.style.display = 'none';
+  sidebarOpen = true;
+}
+
+
+function closeSidebar() {
+  sidebar.style.right = '-250px';
+  tease.style.display = 'block';
+  sidebarOpen = false;
+  animateTease();
+}
+
+function goToLecture(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  closeSidebar();
+}
+
+// ✅ Force-close this sidebar if the other one opens
+setInterval(() => {
+  if (otherSidebar.style.right === '0px' && sidebarOpen) {
+    closeSidebar();
+  }
+}, 100);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ////////////////////////////////////////////////////// -->
+   <!-- ////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////// -->
+
     <!-- FIRST DAY OF COURSE -->
 
-    <div class="main">
+    <div class="main" id="day1">
         <h2 class="course-title">📘 ضیائے شریعت کورس - دن اول</h2>
         <div class="course-info">
             <p><strong>📅 تاریخ:</strong> <span>🌙 14 جولائی، بروز پیر</span></p>
@@ -562,7 +771,7 @@
     <!-- SECOND DAY OF COURSE -->
 
 
-    <div class="main">
+    <div class="main" id="day2">
         <h2 class="course-title">📘 ضیائے شریعت کورس - دن دوم</h2>
         <div class="course-info">
             <p><strong>📅 تاریخ:</strong> <span> 15 جولائی 2025</span></p>
@@ -594,7 +803,7 @@
 
     <!-- THIRD DAY OF COURSE -->
 
-    <div class="main">
+    <div class="main"  id="day3">
         <h2 class="course-title">📘 ضیائے شریعت کورس - دن سوم</h2>
         <div class="course-info">
             <p><strong>📅 تاریخ:</strong> <span> 16 جولائی 2025</span></p>
@@ -615,7 +824,7 @@
 
     <!-- FOURTH DAY OF COURSE -->
 
-    <div class="main">
+    <div class="main"  id="day4">
         <h2 class="course-title">📘 ضیائے شریعت کورس - دن چہارم</h2>
         <div class="course-info">
             <p><strong>📅 تاریخ:</strong> <span> 17 جولائی 2025</span></p>
@@ -647,7 +856,7 @@
 
     <!-- FIFTH DAY OF COURSE -->
 
-    <div class="main">
+    <div class="main" id="day5">
         <h2 class="course-title">📘 ضیائے شریعت کورس - دن پنجم</h2>
         <div class="course-info">
             <p><strong>📅 تاریخ:</strong> <span> 18 جولائی 2025</span></p>
@@ -681,7 +890,7 @@
 
 
     <!-- SIXTH DAY OF COURSE -->
-    <div class="main">
+    <div class="main" id="day6" >
         <h2 class="course-title">📘 ضیائے شریعت کورس - دن ششم</h2>
         <div class="course-info">
             <p><strong>📅 تاریخ:</strong> <span> 19 جولائی 2025</span></p>
@@ -705,18 +914,356 @@
         </button>
 
     </div>
-
+    
     <div id="fullscreenVideo6" class="fullscreen-video">
-        <div class="video-box">
-            <button class="close-btn" onclick="closeFullscreen('fullscreenVideo6')">×</button>
-            <iframe id="videoFrame5" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="video-box">
+                <button class="close-btn" onclick="closeFullscreen('fullscreenVideo6')">×</button>
+                <iframe id="videoFrame5" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
         </div>
+
+<!-- seventh day -->
+
+
+<!-- SEVENTH DAY OF COURSE -->
+<div class="main" id="day7" >
+    <h2 class="course-title">📘 ضیائے شریعت کورس - دن ہفتم</h2>
+    <div class="course-info">
+        <p><strong>📅 تاریخ:</strong> <span>20 جولائی 2025</span></p>
+        <p><strong>⏰ وقت:</strong> <span>07:45 تا 08:45 بجے رات</span></p>
+        <p><strong>📍 مقام:</strong>
+            <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+        </p>
+        <p><strong>👤 مقرر:</strong><br>
+            🌹 حافظ محمد شفیق چشتی (فاضل بھیرہ شریف) 🌹
+        </p>
+        <p><strong>📖 موضوع:</strong><br>
+            🔷 شرائطِ نماز 🔷<br>
+            🌹 فرض اور شرط میں فرق، نجاست کی تعریف، اقسام اور حکم 🌹<br>
+            نماز کے درست ہونے کی لازمی شرائط اور ان کا روزمرہ زندگی میں اطلاق
+        </p><br><br>
     </div>
+
+    <button class="btn"
+        onclick="openFullscreen('fullscreenVideo7', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/676633512062685&autoplay=1')">
+        لیکچر دیکھیں
+    </button>
+</div>
+
+<div id="fullscreenVideo7" class="fullscreen-video">
+    <div class="video-box">
+        <button class="close-btn" onclick="closeFullscreen('fullscreenVideo7')">×</button>
+        <iframe id="videoFrame7" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+
+
+<!-- / -->
+    <!-- eighth day  -->
+
+<!-- EIGHTH DAY OF COURSE -->
+<div class="main" id="day8" >
+    <h2 class="course-title">📘 ضیائے شریعت کورس - دن ہشتم</h2>
+    <div class="course-info">
+        <p><strong>📅 تاریخ:</strong> <span>21 جولائی 2025 (🔴 بروز پیر 🔴)</span></p>
+        <p><strong>⏰ وقت:</strong> <span>07:45 تا 08:45 بجے رات</span></p>
+        <p><strong>📍 مقام:</strong>
+            <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+        </p>
+        <p><strong>👤 مقرر:</strong><br>
+            🌹 حافظ محمد شفیق چشتی (فاضل بھیرہ شریف) 🌹
+        </p>
+        <p><strong>📖 موضوع:</strong><br>
+            🔷 شرائطِ نماز 🔷<br>
+            🌹 پہلی شرط: طہارت 🌹<br>
+            🔴 نجاست کی تعریف، اقسام اور حکم<br>
+            🔴 نجس (ناپاک) چیزوں کو پاک کرنے کا طریقہ<br><br>
+            ✨ نجاست حکمیہ و حقیقیہ کی اقسام و احکام<br>
+            ✨ نجاست خفیفہ و غلیظہ کی پہچان<br>
+            ✨ روزمرہ زندگی میں ان احکام کا اطلاق
+        </p><br><br>
+    </div>
+
+    <button class="btn"
+        onclick="openFullscreen('fullscreenVideo8', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/2350521348699643&autoplay=1')">
+        لیکچر دیکھیں
+    </button>
+</div>
+
+<div id="fullscreenVideo8" class="fullscreen-video">
+    <div class="video-box">
+        <button class="close-btn" onclick="closeFullscreen('fullscreenVideo8')">×</button>
+        <iframe id="videoFrame8" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <!--  -->
+
+    <!-- ninth -->
+    <!-- NINTH DAY OF COURSE -->
+<div class="main" id="day9" >
+    <h2 class="course-title">📘 ضیائے شریعت کورس - دن نہم</h2>
+    <div class="course-info">
+        <p><strong>📅 تاریخ:</strong> <span>22 جولائی 2025 (🔴 بروز منگل 🔴)</span></p>
+        <p><strong>⏰ وقت:</strong> <span>07:45 تا 08:45 بجے رات</span></p>
+        <p><strong>📍 مقام:</strong>
+            <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+        </p>
+        <p><strong>👤 مقرر:</strong><br>
+            🌹 حافظ محمد شفیق چشتی (فاضل بھیرہ شریف) 🌹
+        </p>
+        <p><strong>📖 موضوع:</strong><br>
+            🔷 نجاستِ حکمیہ کی اقسام 🔷<br>
+            🌹 حدث اصغر (وضو کا ٹوٹنا) و حدث اکبر (غسل کا لازم آنا) 🌹<br>
+            🔴 غسل واجب ہونے کی صورتیں<br>
+            🔴 وضو ٹوٹنے کی صورتیں<br>
+            🔴 وضو اور غسل کے فرائض و سنتیں
+        </p><br><br>
+    </div>
+
+    <button class="btn"
+        onclick="openFullscreen('fullscreenVideo9', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/3750119581946200&autoplay=1')">
+        لیکچر دیکھیں
+    </button>
+</div>
+
+<div id="fullscreenVideo9" class="fullscreen-video">
+    <div class="video-box">
+        <button class="close-btn" onclick="closeFullscreen('fullscreenVideo9')">×</button>
+        <iframe id="videoFrame9" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+ 
+    <!--  -->
+
+
+
+    <!--  -->
+    <!-- TENTH DAY OF COURSE -->
+<div class="main" id="day10" >
+    <h2 class="course-title">📘 ضیائے شریعت کورس - دن دہم</h2>
+    <div class="course-info">
+        <p><strong>📅 تاریخ:</strong> <span>23 جولائی 2025</span></p>
+        <p><strong>⏰ وقت:</strong> <span>07:45 تا 08:45 بجے رات</span></p>
+        <p><strong>📍 مقام:</strong>
+            <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+        </p>
+        <p><strong>👤 مقرر:</strong><br>
+            🌹 حافظ محمد شفیق چشتی (فاضل بھیرہ شریف) 🌹
+        </p>
+        <p><strong>📖 موضوع:</strong><br>
+            🔷 نماز کی شرط نمبر دو تا چھ 🔷<br><br>
+            🔴 سترِ عورت (نمازی کے پردے سے متعلقہ احکام)<br>
+            🔴 استقبالِ قبلہ (قبلہ رخ ہونا)<br>
+            🔴 وقت (پانچ نمازوں کے اوقات اور اوقاتِ مکروہ)<br>
+            🔴 نیت (دل اور زبان سے نیت کے احکام)<br>
+            🔴 تکبیرِ تحریمہ (اس کا معنی اور احکام)
+        </p><br><br>
+    </div>
+
+    <button class="btn"
+        onclick="openFullscreen('fullscreenVideo10', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/24217062061257007&autoplay=1')">
+        لیکچر دیکھیں
+    </button>
+</div>
+
+<div id="fullscreenVideo10" class="fullscreen-video">
+    <div class="video-box">
+        <button class="close-btn" onclick="closeFullscreen('fullscreenVideo10')">×</button>
+        <iframe id="videoFrame10" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
+    <!--  -->
+
+
+<!--  -->
+<!-- ELEVENTH DAY OF COURSE -->
+<div class="main" id="day11" >
+    <h2 class="course-title">📘 ضیائے شریعت کورس - دن یازدہم</h2>
+    <div class="course-info">
+        <p><strong>📅 تاریخ:</strong> <span>24 جولائی 2025 (🔴 بروز جمعرات 🔴)</span></p>
+        <p><strong>⏰ وقت:</strong> <span>07:45 تا 08:45 بجے رات</span></p>
+        <p><strong>📍 مقام:</strong>
+            <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+        </p>
+        <p><strong>👤 مقرر:</strong><br>
+            🌹 حافظ محمد شفیق چشتی (فاضل بھیرہ شریف) 🌹
+        </p>
+        <p><strong>📖 موضوع:</strong><br>
+            🪴 نماز کے فرائض 🪴
+        </p><br><br>
+    </div>
+
+    <button class="btn"
+        onclick="openFullscreen('fullscreenVideo11', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/1472525393935515&autoplay=1')">
+        لیکچر دیکھیں
+    </button>
+</div>
+
+<div id="fullscreenVideo11" class="fullscreen-video">
+    <div class="video-box">
+        <button class="close-btn" onclick="closeFullscreen('fullscreenVideo11')">×</button>
+        <iframe id="videoFrame11" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!--  -->
+<!--  -->
+
+<!-- SPECIAL LECTURE - DAY 12 -->
+<div class="main" id="day12">
+<h2 class="course-title">📘 ضیائے شریعت کورس - دن دوازدہم</h2>
+    <div class="course-info">
+        <p><strong>📅 تاریخ:</strong> <span>25 جولائی 2025 (🔴 بروز جمعۃالمبارک 🔴)</span></p>
+        <p><strong>⏰ وقت:</strong> <span>07:40 تا 09:10 بجے رات</span></p>
+        <p><strong>📍 مقام:</strong>
+            <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+        </p>
+        <p><strong>👤 لیکچرر:</strong><br>
+            ❤️ ڈاکٹر محمد ابوبکر صدیق (فاضل بھیرہ شریف)<br>
+            چیئرمین، اسکول آف اسلامک بینکنگ اینڈ فنانس، IIUI
+        </p>
+        <p><strong>📖 موضوع:</strong><br>
+            🔷 آدابِ معیشت 🔷<br>
+            (کاروبار و انویسٹمنٹ کے شرعی ضابطے بمع سوال و جواب)
+        </p>
+    </div>
+    <br><br>
+        <img class="thumbnail" src="Dr_Abu_Bakr_Sahib.jpg" alt="پانچواں لیکچر" />
+<!--  -->
+        <br><br>
+    <button class="btn"
+        onclick="openFullscreen('fullscreenVideo12', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/1660678088222523&autoplay=1')">
+        لیکچر دیکھیں
+    </button>
+</div>
+
+<div id="fullscreenVideo12" class="fullscreen-video">
+    <div class="video-box">
+        <button class="close-btn" onclick="closeFullscreen('fullscreenVideo12')">×</button>
+        <iframe id="videoFrame12" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<!--  -->
+
+
+<!-- THIRTEENTH DAY OF COURSE -->
+<div class="main" id="day13">
+<h2 class="course-title">📘 ضیائے شریعت کورس - دن سیزدہم</h2>
+    <div class="course-info">
+        <p><strong>📅 تاریخ:</strong> <span>26 جولائی 2025 (🔴 بروز ہفتہ 🔴)</span></p>
+        <p><strong>⏰ وقت:</strong> <span>07:45 تا 08:45 بجے رات</span></p>
+        <p><strong>📍 مقام:</strong>
+            <span>جامعہ زاہدیہ اسرارُالعلوم، متصل جامع مسجد انوار مدینہ، گلشن خورشید، چاکرہ روڈ راولپنڈی</span>
+        </p>
+        <p><strong>👤 مقرر:</strong><br>
+            🌹 حافظ محمد شفیق چشتی (فاضل بھیرہ شریف) 🌹
+        </p>
+        <p><strong>📖 موضوع:</strong><br>
+            🌹 آج کے لیکچر میں نماز کے متعلق فقۂ حنفی کی روشنی میں درج ذیل تین امور پر گفتگو ہو گی 🌹<br><br>
+            🔴 01۔ مسئلہ رفع یدین<br>
+            🔴 02۔ قراءت خلف الامام<br>
+            🔴 03۔ آمین بالجہر
+        </p><br><br>
+    </div>
+
+    <button class="btn"
+        onclick="openFullscreen('fullscreenVideo13', 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100078799332545/videos/575926542118388&autoplay=1')">
+        لیکچر دیکھیں
+    </button>
+</div>
+
+<div id="fullscreenVideo13" class="fullscreen-video">
+    <div class="video-box">
+        <button class="close-btn" onclick="closeFullscreen('fullscreenVideo13')">×</button>
+        <iframe id="videoFrame13" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
 
     <div style="display: none;">
         Jamia Zahidia Israr-ul-Uloom, Gulshan-e-Khurshid School System, Zia-e-Shariat Course, Zia-e-Shariyat Course,
         Quran, Hadith, Fiqh, Islamic education, Dars-e-Nizami in Rawalpindi.
     </div>
+
+
+
+<!-- ///   below this is the code of button to go to top//////////////////////////////// -->
+
+
+
+
+
+
+<div id="scrollToTopWrapper">
+  <style>
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      z-index: 9999;
+      width: 55px;
+      height: 55px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00c853, #009624);
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 8px 20px rgba(0, 200, 83, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    #scrollToTopBtn::before {
+      content: "";
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 8px;
+      transform: rotate(-135deg);
+      margin-top: 5px;
+    }
+
+    #scrollToTopBtn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 25px rgba(0, 200, 83, 0.7);
+    }
+  </style>
+
+  <button id="scrollToTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"></button>
+
+  
+  <script>
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    scrollToTopBtn.style.display =
+      window.scrollY > 200 && !document.body.classList.contains("video-open")
+        ? "block"
+        : "none";
+  });
+</script>
+
+
+
+
+</div>
+
+<!-- ////////////////////////////////////// -->
 
 
 
@@ -779,29 +1326,57 @@
             const frame = document.getElementById("videoFrame");
             frame.src = fbVideo;
             document.getElementById("fullscreenVideo").style.display = "flex";
+
         }
 
         function closeFullscreen() {
             document.getElementById("fullscreenVideo").style.display = "none";
             document.getElementById("videoFrame").src = "";
+            document.body.classList.remove("video-open");
+
         }
 
         function openFullscreen(id, videoUrl) {
-            const container = document.getElementById(id);
-            const iframe = container.querySelector("iframe");
-            iframe.src = videoUrl;
-            container.style.display = "flex";
-        }
+  const container = document.getElementById(id);
+  const iframe = container.querySelector("iframe");
+  iframe.src = videoUrl;
+  container.style.display = "flex";
+  document.body.classList.add("video-open");
 
-        function closeFullscreen(id) {
-            const container = document.getElementById(id);
-            const iframe = container.querySelector("iframe");
-            iframe.src = "";
-            container.style.display = "none";
-        }
+  // 👇 This line hides the button immediately
+  scrollToTopBtn.style.display = "none";
+  tease.style.display = 'none';
+
+}
 
 
+       function closeFullscreen(id) {
+  const container = document.getElementById(id);
+  const iframe = container.querySelector("iframe");
+  iframe.src = "";
+  container.style.display = "none";
+  document.body.classList.remove("video-open");
+
+  // ✅ Add this inside
+  if (!sidebarOpen) {
+    tease.style.display = 'block';
+    animateTease();
+  }
+}
+
+
+          const menuToggle = document.getElementById('menu-toggle');
+
+  menuToggle.addEventListener('change', () => {
+    if (menuToggle.checked) {
+      tease.style.display = 'none';
+    } else {
+      tease.style.display = 'block';
+    }
+  });
+  
     </script>
+
 
 </body>
 
